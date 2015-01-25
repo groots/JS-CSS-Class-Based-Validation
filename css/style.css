@@ -1,0 +1,44 @@
+body
+{
+}
+
+.toggleLabel{
+    display: none;
+}
+
+.form-control {
+    border: 1px solid #000;
+    border-radius: 0px;
+    height: 50px;
+}
+
+.form-control input{
+    font-weight: bold;
+    }
+
+input.css-checkbox[type="checkbox"]:checked + label {
+    background-position: 0px -15px;
+}
+
+.optOut label, .checkBoxInput label {
+    background-image: url("../images/checkbox.png");
+}
+input[type=checkbox] .css-checkbox {
+    background-color: white;
+border: 0;
+overflow: hidden;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+
+.error-label {
+    color: red;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
