@@ -25,14 +25,14 @@ input.css-checkbox[type="checkbox"]:checked + label {
 }
 input[type=checkbox] .css-checkbox {
     background-color: white;
-border: 0;
-overflow: hidden;
-clip: rect(0 0 0 0);
-height: 1px;
-margin: -1px;
-padding: 0;
-position: absolute;
-width: 1px;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .error-label {
@@ -42,3 +42,4 @@ width: 1px;
 .uppercase {
     text-transform: uppercase;
 }
+
