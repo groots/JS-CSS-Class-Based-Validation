@@ -24,17 +24,45 @@ input.css-checkbox[type="checkbox"]:checked + label {
     background-image: url("../images/checkbox.png");
 }
 
-input[type=checkbox] .css-checkbox {
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
     background-color: white;
-	border: 0;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 6px;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
 }
+input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"]:checked:after {
+    color: #000;
+    content: '\2714';
+    font-size: 9px;
+    font-weight: 900;
+    left: 3px;
+    position: absolute;
+    top: 2px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: white;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: black;
+}
+
+.error-label {
+    color: red;
+}
+
+.uppercase {
+    text-transform: uppercase;
+
 
 .error-label {
     color: red;
