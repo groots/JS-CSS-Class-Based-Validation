@@ -21,6 +21,7 @@ $(function(){
 
             function processValidation(condition, obj) {  
                 if (condition) {
+                    console.log("made it here");
                     $('label[for=' + obj.attr('id') + ']').css({ "display": "inline" }).addClass("error-label");
                 } else {
                     $('label[for=' + obj.attr('id') + ']').css({ "display": "inline" }).removeClass("error-label");
@@ -31,6 +32,7 @@ $(function(){
             $(".notNull").each(function () {
                 var fieldVal = $(this).val() != "" ? $(this).val() : 1;
                 processValidation(fieldVal === 1, $(this));
+                console.log("not null");
             });
 
             //validate phone
