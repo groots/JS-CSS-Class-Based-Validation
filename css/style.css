@@ -3,7 +3,7 @@ body
 }
 
 .toggleLabel{
-    display: none;
+    visibility: hidden;
 }
 
 .form-control {
@@ -23,6 +23,7 @@ input.css-checkbox[type="checkbox"]:checked + label {
 .optOut label, .checkBoxInput label {
     background-image: url("../images/checkbox.png");
 }
+
 input[type=checkbox] .css-checkbox {
     background-color: white;
 	border: 0;

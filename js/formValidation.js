@@ -1,30 +1,11 @@
 //Javascript
 $(function(){
     $(".access-button").on("click", function () {
-            //check form items that should not be null
-            //Clear all error messages
-
-    //        $('label').css({ "display": "none" });
-
-            //var registerReturnObj = {
-            //    "_id": "54bfccab9d4c46942b3b43a5",
-            //    "acceptTerms": false,
-            //    "firstName": "Luna",
-            //    "lastName": "Dale",
-            //    "email": "lunadale@ecosys.com",
-            //    "phone": "(962) 600-3814",
-            //    "registered": "2014-01-16T01:27:22 +05:00",
-            //    "greeting": "Hello, undefined! You have 1 unread messages."
-            //};
-
-
-
             function processValidation(condition, obj) {  
                 if (condition) {
-                    console.log("made it here");
-                    $('label[for=' + obj.attr('id') + ']').css({ "display": "inline" }).addClass("error-label");
+                    $('label[for=' + obj.attr('id') + ']').css({ "visibility": "visible" }).addClass("error-label");
                 } else {
-                    $('label[for=' + obj.attr('id') + ']').css({ "display": "inline" }).removeClass("error-label");
+                    $('label[for=' + obj.attr('id') + ']').css({ "visibility": "hidden" }).removeClass("error-label");
                 }
             }
 
@@ -32,7 +13,6 @@ $(function(){
             $(".notNull").each(function () {
                 var fieldVal = $(this).val() != "" ? $(this).val() : 1;
                 processValidation(fieldVal === 1, $(this));
-                console.log("not null");
             });
 
             //validate phone
@@ -45,7 +25,6 @@ $(function(){
             //validate checkbox 
             $(".validate-checked").each(function () {
                 if (!$(this).is(":checked")) {
-                    console.log("not checked");
                 }
             });
 
@@ -68,7 +47,6 @@ $(function(){
 
             //loop through form to look for any error tags if true return false
             $('#get-wifi').find('[input]').each(function () {
-                console.log("code here");
 
             });
             var hostOrigin = window.location.origin;
@@ -98,9 +76,9 @@ $(function(){
 
         $(".form-control").on("keyup", function () {
             if ($(this).val() === "") {
-                $('label[for=' + $(this).attr('id') + ']').css({ "display": "none" });
+                $('label[for=' + $(this).attr('id') + ']').css({ "visibility": "hidden" });
             } else {
-                $('label[for=' + $(this).attr('id') + ']').css({ "display": "inline" });
+                $('label[for=' + $(this).attr('id') + ']').css({ "visibility": "visible" });
             }
         });
 });
