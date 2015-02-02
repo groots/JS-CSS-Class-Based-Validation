@@ -6,10 +6,12 @@ body
     visibility: hidden;
 }
 
-.form-control {
+.form-control, select {
     border: 1px solid #000;
     border-radius: 0px;
     height: 50px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
 .form-control input{
@@ -29,16 +31,28 @@ input[type="checkbox"]{
     -webkit-appearance: none;
     background-color: white;
     border: 1px solid #cacece;
+    bottom: 3px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    padding: 6px;
     display: inline-block;
-    position: relative;
-    bottom: 5px;
+    padding: 6px;
+    position: relative;background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaBAMAAABWeiG6AAAAA3NCSVQICAjb4U/gAAAAD1BMVEXe3t7////m5ub39/fv7+9d3/qMAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFnRFWHRDcmVhdGlvbiBUaW1lADAxLzExLzEyymPybAAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAAAJJJREFUGJVVkOsRwyAMgxXCAKFmAHpZoLlkgKTdf6cK23lYP4DvBLINShD68kX63biDep/4gmpxbMjr1jAaViTuFTCccPTDRzcwSEMqBsWWvYahZTBxNBwiRvd6a7inkOx1J69b0W/L2RV7notwKnN5zZR93uZ8GAp5FrWtf1n6SLRx/ZraN9JOTxR+3wPLVgJSfwffF4JRS32lAAAAAElFTkSuQmCC) no-repeat 5px;
+
 }
 input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}   
+
+.search-box {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaBAMAAABWeiG6AAAAA3NCSVQICAjb4U/gAAAAD1BMVEXe3t7////m5ub39/fv7+9d3/qMAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFnRFWHRDcmVhdGlvbiBUaW1lADAxLzExLzEyymPybAAAABh0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzT7MfTgAAAJJJREFUGJVVkOsRwyAMgxXCAKFmAHpZoLlkgKTdf6cK23lYP4DvBLINShD68kX63biDep/4gmpxbMjr1jAaViTuFTCccPTDRzcwSEMqBsWWvYahZTBxNBwiRvd6a7inkOx1J69b0W/L2RV7notwKnN5zZR93uZ8GAp5FrWtf1n6SLRx/ZraN9JOTxR+3wPLVgJSfwffF4JRS32lAAAAAElFTkSuQmCC) no-repeat 5px;
+    position: relative;
 }
 
+.glyphicon-search {
+    font-size: 1em;
+    position: absolute;
+    right: 30px;
+    top:20px;
+}
 input[type="checkbox"]:checked:after {
     color: #000;
     content: '\2714';
@@ -56,21 +70,38 @@ input[type="checkbox"]:checked {
     color: black;
 }
 
-.error-label {
+.error-label, .error-label a {
     color: red;
 }
 
-.uppercase {
-    text-transform: uppercase;
-
-
-.error-label {
-    color: red;
+input[type="checkbox"] {
+    background: rgba(255, 0, 0, 0.4);
+    border: solid 1.5pt red;
 }
 
 .uppercase {
     text-transform: uppercase;
 }
 
+.error-label {
+    color: red;
+}
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.wrapper-set {
+    position: relative;
+    height: 75px;
+}
+.plus-sign, .minus-sign {
+    font-size: 2em;
+    font-weight: 900;
+    position: absolute;
+    right: 30px;
+}
+.body-text {
+    display: none;
+}
 
